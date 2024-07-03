@@ -688,7 +688,7 @@
             <p>手机：+86 - 15832916606</p>
             <p>手机：+86 - 13930902119</p>
             <p>邮箱：fangyuwufang@163.com</p>
-            <p>地址：河北省宁晋县凤凰镇北鱼台村村东 方宇无纺布厂</p>
+            <p>地址：河北省邢台市宁晋县凤凰镇北鱼台村村东 方宇无纺布厂</p>
         </aside>
 
     </div>
@@ -704,7 +704,7 @@
 
         <div class="col g-7">
             <ul class="copyright">
-                <li>Copyright © 2015 - <span id="copyright-year">2024</span> fangyuwf.com All Rights Reserved.</li>
+                <li>Copyright © 2015 - <span id="copyright-year">2024</span> hbfywf.com. Inc. All Rights Reserved.</li>
             </ul>
         </div>
 
@@ -715,7 +715,7 @@
 
 <!-- Java Script
 ================================================== -->
-<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=gSKsbkmR4Lquq23dKI3doUpTCk4T614Q"></script>
@@ -740,32 +740,35 @@
 
     function loadMap() {
         // 百度地图API功能
-        var map = new BMap.Map("allmap");
-        var point = new BMap.Point(114.98348837265148, 37.59002699064284);
+        const map = new BMap.Map("allmap");
+
+        const point = new BMap.Point(114.98348837265148, 37.59002699064284);
         map.centerAndZoom(point, 19);
-        var marker = new BMap.Marker(point); // 创建标注
-        map.addOverlay(marker); // 将标注添加到地图中
+
+        const marker = new BMap.Marker(point); // 创建标注
         marker.setAnimation(BMAP_ANIMATION_BOUNCE); // 跳动的动画
+
+        map.addOverlay(marker); // 将标注添加到地图中
         map.enableScrollWheelZoom(); // 启用滚轮放大缩小，默认禁用
 
-        var mapType1 = new BMap.MapTypeControl({
+        const mapType = new BMap.MapTypeControl({
             mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP],
             anchor: BMAP_ANCHOR_TOP_RIGHT
         });
-        map.addControl(mapType1);
+        map.addControl(mapType);
 
         // 左上角，添加比例尺
-        var top_left_control = new BMap.ScaleControl({
+        const top_left_control = new BMap.ScaleControl({
             anchor: BMAP_ANCHOR_TOP_LEFT
         });
         map.addControl(top_left_control);
 
         // 左上角，添加默认缩放平移控件
-        var top_left_navigation = new BMap.NavigationControl();
+        const top_left_navigation = new BMap.NavigationControl();
         map.addControl(top_left_navigation);
     }
 
-    window.onload = loadMap();
+    loadMap();
 </script>
 
 <script>
