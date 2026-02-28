@@ -509,7 +509,7 @@ ul#nav li.active a {
 .reveal-modal .link-box {
     padding: 18px 36px;
     background: #111;
-    text-align: left;
+    text-align: right;
 }
 
 .reveal-modal .link-box a {
@@ -525,7 +525,7 @@ ul#nav li.active a {
 }
 
 .reveal-modal a.close-reveal-modal {
-    margin-left: 28px;
+    margin-right: 6px;
 }
 
 /* ================================================================== */
